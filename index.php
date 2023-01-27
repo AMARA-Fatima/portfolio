@@ -10,6 +10,7 @@ define("PAGE_TITLE", "Accueil");
 <?php include ("./assets/inc/header.php") ?>
 
 <main>
+    
 </main>
 
 <?php include ("./assets/inc/footer.php") ?>
