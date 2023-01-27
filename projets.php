@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Commencer par l'appel du controller
 require("./controllers/projectController.php");
@@ -10,12 +10,18 @@ $projects = $controller->readAll();
 define("PAGE_TITLE", "Projets");
 
 ?>
-<?php include ("./assets/inc/head.php") ?>
-<?php include ("./assets/inc/header.php") ?>
+<?php include("./assets/inc/head.php") ?>
+<?php include("./assets/inc/header.php") ?>
 
-<main>
-    <h1 class="offset-4">Liste des projets</h1>
-    <?php var_dump($projects)?>
+<main class="d-flex ">
+
+    <!-- <?php var_dump($projects) ?> -->
+
+    <?php
+    foreach ($projects as $project) {
+        $project->afficherProjects();
+    }
+    ?>
 </main>
 
-<?php include ("./assets/inc/footer.php") ?>
+<?php include("./assets/inc/footer.php") ?>
