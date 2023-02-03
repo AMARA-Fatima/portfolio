@@ -14,7 +14,7 @@ define("PAGE_TITLE", "Detail-Projet");
 <?php include("./assets/inc/header.php") ?>
 
 <main class="flex-wrap justify-content-around carousel2">
-    <!-- <?php var_dump($project) ?>  -->
+    <?php var_dump($project) ?>
 
     <div class="container-fluid">
 
@@ -43,8 +43,15 @@ define("PAGE_TITLE", "Detail-Projet");
 
         </div>
     </div>
-<?php
+    <?php
             }
-?>
+            ?>
+            <h3>Competences :</h3>
+            <ul>
+                <?php foreach($project->skills as $skill){?>
+                    <li><?= $skill->name ?></li>
+                <?php } ?>
+            </ul>
+
 </main>
 <?php include("./assets/inc/footer.php") ?>

@@ -11,5 +11,6 @@ class ProjectModel
     public ?string $link_site;
     public ?string $link_git;
     public ?array $pictures;
+    public ?array $skills;
 }
 ?>
