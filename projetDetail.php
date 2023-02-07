@@ -14,7 +14,7 @@ define("PAGE_TITLE", "Detail-Projet");
 <?php include("./assets/inc/header.php") ?>
 
 <main class="flex-wrap justify-content-around carousel2">
-    <?php var_dump($project) ?>
+    <!-- <?php var_dump($project) ?> -->
 
     <div class="container-fluid">
 
@@ -22,7 +22,7 @@ define("PAGE_TITLE", "Detail-Projet");
     </div>
     </div>
 
-    <div class="row ms-5">
+    <div class="row ms-1">
         <div class="col-7">
             <?php
             foreach ($project->pictures as $picture) {
@@ -30,28 +30,29 @@ define("PAGE_TITLE", "Detail-Projet");
                 <img src="/portfolio/assets/img/projects/<?= $picture->path ?>" alt="<?= $picture->alt ?>" class="w-100 mb-5">
         </div>
 
-        <div class="bg-black opacity-75 col">
-            <p>Description : <br><?= $project->description ?></p>
-            <ul class="list-group list-group-flush  ms-3 mt-5">
-                <li>Date_début : <?= $project->date_start ?></li>
-                <li>Date_fin : <?= $project->date_end ?></li>
+        <div class="bg-black opacity-75 col-5">
+            <h3 class="text-decoration-underline mt-5">Description : <br><?= $project->description ?></h3>
+            <ul class="list-group list-group-flush mt-5">
+                <p>Date_début : <?= $project->date_start ?></p>
+                <p>Date_fin : <?= $project->date_end ?></p>
             </ul>
             <div class="mt-4 text-center">
                 <a href="#" class="btn card-link bg-primary bg-lg text-white">Voir_site : <?= $project->link_site ?></a>
                 <a href="#" class="btn card-link bg-primary bg-lg text-white">Voir_Git : <?= $project->link_git ?></a>
             </div>
+            <div >
+                <h3 class="text-decoration-underline mt-5">Competences :</h3>
+                <ul>
+                    <?php foreach ($project->skills as $skill) { ?>
+                        <li><?= $skill->name ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
 
         </div>
     </div>
-    <?php
+<?php
             }
-            ?>
-            <h3>Competences :</h3>
-            <ul>
-                <?php foreach($project->skills as $skill){?>
-                    <li><?= $skill->name ?></li>
-                <?php } ?>
-            </ul>
-
+?>
 </main>
 <?php include("./assets/inc/footer.php") ?>

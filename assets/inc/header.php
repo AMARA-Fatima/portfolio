@@ -24,6 +24,6 @@
     </div>
   </nav>
   <div class="container-fluid" id="bg">
-    <img class="" alt="">
+    <img>
   </div>
 </header>

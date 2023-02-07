@@ -13,7 +13,3 @@
 </head>
 
 <body>
-
-</body>
-
-</html>

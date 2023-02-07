@@ -18,12 +18,10 @@ class ProjectController
 
         $result = $statement->fetchAll(PDO::FETCH_CLASS, "ProjectModel");
 
-        foreach($result as $project)
-        {
+        foreach ($result as $project) {
             $this->loadSkillsFromProject($project);
         }
         return $result;
-
     }
 
     public function readOne($id): ProjectModel
@@ -60,11 +58,11 @@ class ProjectController
         $this->loadSkillsFromProject($project);
         return $project;
     }
-    
+
     public function loadSkillsFromProject(ProjectModel $project)
     {
         global $pdo;
-        $sql ="SELECT skill.`id_skill`, skill.`name`, skill.`level`, skill.`picture`
+        $sql = "SELECT skill.`id_skill`, skill.`name`, skill.`level`, skill.`picture`
                 FROM skill
                 INNER JOIN skill_project
                 ON skill_project.`id_skill` = skill.`id_skill`
@@ -77,6 +75,6 @@ class ProjectController
         $statement->bindParam(":id", $project->id_project, PDO::PARAM_INT);
         $statement->execute();
 
-        $project->skills = $statement->fetchAll(PDO::FETCH_CLASS, "SkillModel"); 
+        $project->skills = $statement->fetchAll(PDO::FETCH_CLASS, "SkillModel");
     }
 }
