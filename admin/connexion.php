@@ -42,7 +42,7 @@ if (isset($_POST["submit"]) && isset($_POST["email"]) && isset($_POST["password"
                     <label for="password" class="form-label">Mot de passe :</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
-                <button type="submit" name="submit" class="btn btn-primary offset-1">Valider</button>
+                <button type="submit" name="submit" class="btn btn-primary offset-5">Valider</button>
             </form>
 
         </div>

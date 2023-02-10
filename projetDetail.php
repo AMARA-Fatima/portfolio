@@ -31,7 +31,7 @@ define("PAGE_TITLE", "Detail-Projet");
         </div>
 
         <div class="bg-black opacity-75 col-5">
-            <h3 class="text-decoration-underline mt-5">Description : <br><?= $project->description ?></h3>
+            <h3 class="mt-5">Description : <br><?= $project->description ?></h3>
             <ul class="list-group list-group-flush mt-5">
                 <p>Date_début : <?= $project->date_start ?></p>
                 <p>Date_fin : <?= $project->date_end ?></p>

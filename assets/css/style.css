@@ -2,28 +2,42 @@ body {
     background-color: rgba(3, 3, 53, 0.959);
     color: rgb(255, 255, 255);
 }
-#bg{
+
+#bg {
     width: 100%;
-    height: 100vh;
-    background-image: url("../img/bg/robynne-hu-HOrhCnQsxnQ-unsplash.jpg");
+    height: 200vh;
+    background-image: url("../img/bg/daniel-josef-AMssSjUaTY4-unsplash.jpg");
+    opacity: 50%;
     background-size: cover;
     position: relative;
     padding: 0;
 }
 
-.navbar{
-    background-color:rgba(2, 4, 75, 0.8);
+#bg2 {
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
     height: 70px;
     border-spacing: 100px;
 }
-main{
+
+main {
     margin-top: 70px;
 }
-.icone{
+
+.icone {
     width: 70px;
     height: 70px;
 }
-.titre{
+
+.titre {
     background: rgba(0, 0, 0, 0.8);
     z-index: 1;
     position: absolute;
@@ -35,7 +49,8 @@ main{
     color: white;
     width: 40%;
 }
-.photo{
+
+.photo {
     width: 250px;
     height: 350px;
     z-index: 1;
@@ -46,7 +61,8 @@ main{
     right: 0;
     top: 30%;
 }
-.carousel{
+
+.carousel {
     width: 700px;
     height: 900px;
     z-index: 1;
@@ -59,7 +75,8 @@ main{
     color: white;
     top: 7%
 }
-.carousel2{
+
+.carousel2 {
     z-index: 1;
     position: absolute;
     text-align: center;
@@ -69,14 +86,29 @@ main{
     color: white;
     top: 10%
 }
-#formulaire{
+
+#formulaire {
     background-color: rgba(5, 5, 5, 0.8);
     z-index: 1;
     position: absolute;
-    text-align: center;
     left: 0;
     right: 25px;
-    top: 5%;
+    top: 10%;
     color: white;
     top: 20%;
+}
+
+#vardump {
+    margin-top: 100px;
+}
+
+.btnProject{
+    color: #FFC90E !important; 
+    background-color:black !important;
+    box-shadow: grey 0px 7px 29px 0px!important;
+}
+.btnProject:hover{
+    color: #f5d256 !important; 
+    background-color:rgb(70, 67, 67) !important;
+    box-shadow: rgb(162, 162, 161) 0px 7px 29px 0px!important;
 }

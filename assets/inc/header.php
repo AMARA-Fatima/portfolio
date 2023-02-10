@@ -14,7 +14,7 @@
             <a class="nav-link me-5 ms-5" href="/portfolio/projets">Projets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-5 ms-5" href="/portfolio/competences">Competences</a>
+            <a class="nav-link me-5 ms-5" href="/portfolio/competences.php">Competences</a>
           </li>
           <li class="nav-item">
             <a class="nav-link me-5 ms-5">Contact</a>
@@ -24,6 +24,5 @@
     </div>
   </nav>
   <div class="container-fluid" id="bg">
-    <img>
   </div>
 </header>

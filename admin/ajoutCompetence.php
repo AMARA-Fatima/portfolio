@@ -1,8 +1,10 @@
 <?php
+session_start();
 
 define("PAGE_TITLE", "Ajouter une competence");
 
 require_once("../controllers/skillController.php");
+require_once("../controllers/accountController.php");
 
 $skillController = new SkillController;
 
@@ -18,7 +20,20 @@ if (isset($_POST["submit"]))
 <main id="formulaire" class="container">
     <div class="row">
         <div class="col-9 ms-3">
+
             <h1>Ajouter une compétence :</h1>
+
+            <?php
+        if(isset($result)) {
+            if($result["success"]) { ?>
+                <div class="alert alert-success"><?= $result["message"] ?></div>
+            <?php }
+            else { ?>
+                <div class="alert alert-danger"><?= $result["message"] ?></div>
+            <?php }
+        }
+        ?>
+            
             <form action="#" method="POST" class="offset-4 my-3" enctype="multipart/form-data">
 
                 <label for="name">Nom de la compétence</label>
@@ -31,22 +46,6 @@ if (isset($_POST["submit"]))
                 <input class="form-control" type="file" name="picture" id="picture" accept="image/png, image/jpeg, image/webp" required>
 
                 <button type="submit" name="submit" class="btn btn-primary mt-2">Envoyer</button>
-
-                <!-- <input type="hidden" name="faire" value="create_competence">
-
-                <input class="form-control" type="text" name="name" placeholder="Nom de la compétences">
-
-                <input class="form-control mt-3" type="int" name="level" placeholder="Ajouter un level">
-
-                <label for="picture" class="mt-2">Ajouter une image</label>
-                <input class="form-control" type="file" name="picture">
-
-                <div>
-                    <input type="checkbox" name="active" value="1">
-                    <label for="active">afficher dans le Front-end</label>
-                </div>
-
-                <button type="submit" name="soumettre" class="mt-3 btn text-white bg-primary">Enregistrer</button> -->
 
             </form>
         </div>

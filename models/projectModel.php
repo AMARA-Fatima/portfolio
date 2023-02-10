@@ -2,7 +2,6 @@
 
 class ProjectModel
 {
-    public string $cover;
     public int $id_project;
     public string $name;
     public string $description;
@@ -10,6 +9,7 @@ class ProjectModel
     public ?string $date_end;
     public ?string $link_site;
     public ?string $link_git;
+    public string $cover;
     public ?array $pictures;
     public ?array $skills;
 }
